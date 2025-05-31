@@ -1,0 +1,2 @@
+1. We are redifining the project entity to clean it up
+Now the layers are not grouped by the "canvas" object anymore, its the project itself.
