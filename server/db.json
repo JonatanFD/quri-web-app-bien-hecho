@@ -1,0 +1,213 @@
+{
+    "users": [
+        {
+            "id": "user-1",
+            "name": "Alice",
+            "email": "alice@example.com",
+            "password": "password"
+        }
+    ],
+    "projects": [
+        {
+            "id": "project-1",
+            "user_id": "user-1",
+            "name": "Project One",
+
+            "preview_image_url": "https://picsum.photos/150/150",
+
+            "status": "blueprint",
+            "gender": "men",
+            "garment_color": "#1B8937",
+            "garment_size": "M",
+
+            "last_modified": "2025-05-29T20:40:47.478Z",
+            "created_at": "2025-05-29T20:40:47.478Z",
+
+            "layers": [
+                {
+                    "id": "layer-1",
+                    "project_id": "project-1",
+                    "type": "image",
+                    "image_url": "https://picsum.photos/200/200",
+                    "visible": true,
+                    "opacity": 1.0,
+                    "z_index": 0,
+                    "x": 50,
+                    "y": 50,
+                    "width": 200,
+                    "height": 200
+                },
+                {
+                    "id": "layer-2",
+                    "project_id": "project-1",
+                    "type": "text",
+                    "text_content": "Sample Text",
+                    "font_size": 16,
+                    "font_color": "#000000",
+                    "font_family": "Arial",
+                    "bold": false,
+                    "italic": false,
+                    "underline": false,
+                    "visible": true,
+                    "opacity": 1.0,
+                    "z_index": 1,
+                    "x": 50,
+                    "y": 50
+                }
+            ]
+        }
+    ],
+    "garmentColors": [
+        {
+            "label": "black",
+            "value": "#161615",
+            "id": "baa8"
+        },
+        {
+            "label": "gray",
+            "value": "#403D3B",
+            "id": "c635"
+        },
+        {
+            "label": "light-gray",
+            "value": "#B3B1AF",
+            "id": "e0aa"
+        },
+        {
+            "label": "white",
+            "value": "#EDEDED",
+            "id": "368d"
+        },
+        {
+            "label": "red",
+            "value": "#B51B14",
+            "id": "3941"
+        },
+        {
+            "label": "pink",
+            "value": "#F459B0",
+            "id": "7a76"
+        },
+        {
+            "label": "light-purple",
+            "value": "#D890E4",
+            "id": "418f"
+        },
+        {
+            "label": "purple",
+            "value": "#693FA0",
+            "id": "aafd"
+        },
+        {
+            "label": "light-blue",
+            "value": "#00A5BC",
+            "id": "5b17"
+        },
+        {
+            "label": "cyan",
+            "value": "#31B7C9",
+            "id": "a85a"
+        },
+        {
+            "label": "sky-blue",
+            "value": "#3F9BDC",
+            "id": "86fb"
+        },
+        {
+            "label": "blue",
+            "value": "#1B3D92",
+            "id": "d448"
+        },
+        {
+            "label": "green",
+            "value": "#1B8937",
+            "id": "2b4c"
+        },
+        {
+            "label": "light-green",
+            "value": "#5BBE65",
+            "id": "f0a6"
+        },
+        {
+            "label": "yellow",
+            "value": "#FECD08",
+            "id": "da82"
+        },
+        {
+            "label": "dark-yellow",
+            "value": "#F2AB00",
+            "id": "b24b"
+        }
+    ],
+    "garmentSizes": [
+        {
+            "label": "XS",
+            "value": "XS",
+            "id": "size-xs"
+        },
+        {
+            "label": "S",
+            "value": "S",
+            "id": "size-s"
+        },
+        {
+            "label": "M",
+            "value": "M",
+            "id": "size-m"
+        },
+        {
+            "label": "L",
+            "value": "L",
+            "id": "size-l"
+        },
+        {
+            "label": "XL",
+            "value": "XL",
+            "id": "size-xl"
+        },
+        {
+            "label": "XXL",
+            "value": "XXL",
+            "id": "size-xxl"
+        }
+    ],
+    "projectStatus": [
+        {
+            "label": "In Progress",
+            "value": "in progress",
+            "id": "status-in-progress"
+        },
+        {
+            "label": "Blueprint",
+            "value": "blueprint",
+            "id": "status-blueprint"
+        },
+        {
+            "label": "Completed",
+            "value": "completed",
+            "id": "status-completed"
+        }
+    ],
+    "genders": [
+        {
+            "label": "men",
+            "value": "men",
+            "id": "8dd0"
+        },
+        {
+            "label": "women",
+            "value": "women",
+            "id": "b5b5"
+        },
+        {
+            "label": "unisex",
+            "value": "unisex",
+            "id": "f624"
+        },
+        {
+            "label": "kids",
+            "value": "kids",
+            "id": "6643"
+        }
+    ]
+}
