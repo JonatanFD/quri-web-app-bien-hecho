@@ -57,11 +57,6 @@ export class App {
       icon: 'explore',
     },
     {
-      path: 'projects',
-      label: 'Projects',
-      icon: 'folder',
-    },
-    {
       path: 'design-lab',
       label: 'Design Lab',
       icon: 'brush',
