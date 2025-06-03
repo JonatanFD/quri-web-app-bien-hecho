@@ -8,6 +8,7 @@ export class ProjectAssembler {
     static toEntityFromResponse(response: ProjectResponse): Project {
 
         const layers = LayerAssembler.toEntitiesFromResponse(response.layers);
+
         return new Project(
             response.id,
             response.user_id,
@@ -21,6 +22,5 @@ export class ProjectAssembler {
             new Date(response.created_at),
             layers
         );
-
     }
 }
