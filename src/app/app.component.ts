@@ -48,16 +48,6 @@ export class App implements OnDestroy, OnInit {
             icon: 'dashboard',
         },
         {
-            path: 'templates',
-            label: 'Templates',
-            icon: 'app_registration',
-        },
-        {
-            path: 'favorites',
-            label: 'Favorites',
-            icon: 'favorite',
-        },
-        {
             path: 'explore',
             label: 'Explore',
             icon: 'explore',
