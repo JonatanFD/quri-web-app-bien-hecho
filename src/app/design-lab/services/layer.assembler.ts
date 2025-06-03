@@ -1,3 +1,4 @@
+import { DEFAULT_LAYER_STYLES } from "../../const";
 import { ImageLayer, Layer, TextLayer } from "../model/layer.entity";
 import { LayerResponse } from "./project.response";
 
@@ -23,12 +24,12 @@ export class LayerAssembler {
                 response.opacity,
                 response.visible,
                 response.text_content || '',
-                response.font_size || 16,
-                response.font_color || '#000000',
-                response.font_family || 'Arial',
-                response.bold || false,
-                response.italic || false,
-                response.underline || false
+                response.font_size || DEFAULT_LAYER_STYLES.FONT_SIZE,
+                response.font_color || DEFAULT_LAYER_STYLES.FONT_COLOR,
+                response.font_family || DEFAULT_LAYER_STYLES.FONT_FAMILY,
+                response.bold || DEFAULT_LAYER_STYLES.BOLD,
+                response.italic || DEFAULT_LAYER_STYLES.ITALIC,
+                response.underline || DEFAULT_LAYER_STYLES.UNDERLINE
             );
         } else {
             throw new Error(`Unknown layer type: ${response.type}`);

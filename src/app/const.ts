@@ -26,11 +26,6 @@ export enum PROJECT_GENDER {
     KIDS = 'kids',
 }
 
-export enum LayerType {
-    IMAGE = 'image',
-    TEXT = 'text',
-}
-
 export enum GARMENT_COLOR {
     BLACK = '#161615',
     GRAY = '#403D3B',
@@ -57,4 +52,9 @@ export enum GARMENT_SIZE {
     L = 'L',
     XL = 'XL',
     XXL = 'XXL',
+}
+
+export enum LayerType {
+    IMAGE = 'image',
+    TEXT = 'text',
 }
