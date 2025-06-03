@@ -8,14 +8,14 @@ export const routes: Routes = [
     },
     {
         path: 'home',
-        loadChildren: () =>
+        loadComponent: () =>
             import('./public/pages/home/home.component').then(
                 (m) => m.HomeComponent
             ),
     },
     {
         path: 'design-lab',
-        loadChildren: () =>
+        loadComponent: () =>
             import('./public/pages/design-lab/design-lab.component').then(
                 (m) => m.DesignLabComponent
             ),
