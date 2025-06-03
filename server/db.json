@@ -345,7 +345,7 @@
         }
     ],
 
-    "products": [
+    "catalog": [
         {
             "id": "product-1",
             "project_id": "project-1",
