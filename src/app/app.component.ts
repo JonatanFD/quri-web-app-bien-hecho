@@ -24,8 +24,8 @@ export interface AppRoute {
         MatButtonModule,
         MatIconModule,
     ],
-    templateUrl: './app.html',
-    styleUrl: './app.css',
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css',
 })
 export class App implements OnDestroy, OnInit {
     protected title = 'quri-web-app-bien-hecho';
