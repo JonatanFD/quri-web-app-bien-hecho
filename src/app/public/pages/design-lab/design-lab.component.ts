@@ -14,7 +14,6 @@ import { ProjectCardComponent } from '../../../design-lab/components/project-car
     standalone: true,
     imports: [
         CommonModule,
-        HttpClient,
         MatButtonModule,
         MatIconModule,
         MatProgressSpinnerModule,
@@ -32,7 +31,8 @@ export class DesignLabComponent implements OnInit {
 
     constructor(
         private projectService: ProjectService,
-        private authService: AuthService
+        private http: HttpClient,
+        // private authService: AuthService
     ) {}
 
     ngOnInit(): void {
@@ -40,21 +40,21 @@ export class DesignLabComponent implements OnInit {
     }
 
     loadProjects(): void {
-        const userId = this.authService.getCurrentUserId();
-        this.projectService.getAllById(userId).subscribe({
-            next: (projects) => {
-                // Filter by userId in frontend for extra safety
-                this.projects = projects.filter(
-                    (project) => project.userId === userId
-                );
-                this.loading = false;
-            },
-            error: (err) => {
-                console.error('Error fetching projects:', err);
-                this.error = 'Failed to load projects. Please try again later.';
-                this.loading = false;
-            },
-        });
+        // const userId = this.authService.getCurrentUserId();
+        // this.projectService.getAllById(userId).subscribe({
+        //     next: (projects) => {
+        //         // Filter by userId in frontend for extra safety
+        //         this.projects = projects.filter(
+        //             (project) => project.userId === userId
+        //         );
+        //         this.loading = false;
+        //     },
+        //     error: (err) => {
+        //         console.error('Error fetching projects:', err);
+        //         this.error = 'Failed to load projects. Please try again later.';
+        //         this.loading = false;
+        //     },
+        // });
     }
 
     onProjectDeleted(deletedProjectId: string): void {
