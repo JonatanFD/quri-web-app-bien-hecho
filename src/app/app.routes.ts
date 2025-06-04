@@ -20,4 +20,11 @@ export const routes: Routes = [
                 (m) => m.DesignLabComponent
             ),
     },
+    {
+        path: 'profile',
+        loadComponent: () =>
+            import('./public/pages/profile/profile.component').then(
+                (m) => m.ProfileComponent
+            ),
+    }
 ];

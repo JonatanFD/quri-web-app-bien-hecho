@@ -38,7 +38,6 @@ export class DesignLabComponent implements OnInit {
     loadProjects(): void {
         this.projectService.getUserBlueprints().subscribe(
             (projects) => {
-                console.log('Projects loaded:', projects);
                 this.projects = projects;
                 this.loading = false;
             },

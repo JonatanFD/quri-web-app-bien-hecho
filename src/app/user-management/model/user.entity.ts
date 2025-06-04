@@ -9,18 +9,15 @@ export class User {
 
     constructor(
         id: string,
-        name: string,
         email: string,
         token: string,
-        firstName: string,
         rol: string,
-        lastName: string,
-        gender: string
+        profile: Profile,
     ) {
         this.id = id;
         this.email = email;
         this.token = token;
-        this.profile = new Profile(name, email, firstName, lastName, gender);
+        this.profile = profile;
         this.rol = rol;
     }
 }

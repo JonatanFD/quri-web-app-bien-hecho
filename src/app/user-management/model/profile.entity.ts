@@ -1,15 +1,24 @@
+import { Address } from './address.entity';
+
 export class Profile {
-    name: string;
-    email: string;
     firstName: string;
     lastName: string;
     gender: string;
+    addresses: Address[];
 
-    constructor(name:string, email: string, firstName: string, lastName: string, gender: string) {
-        this.name = name;
-        this.email = email;
+    constructor(
+        firstName: string,
+        lastName: string,
+        gender: string,
+        addresses: Address[]
+    ) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
+        this.addresses = addresses;
+    }
+
+    getFullName(): string {
+        return `${this.firstName || ''} ${this.lastName || ''}`.trim();
     }
 }

@@ -1,7 +1,6 @@
 export const environment = {
   production: true,
   apiBaseUrl: 'http://localhost:3000',
-  serverBaseUrl: 'http://localhost:3000',
   defaultPreviewImageUrl: 'https://picsum.photos/150/150',
   defaultProjectStatus: 'blueprint',
   defaultGarmentSize: 'M',

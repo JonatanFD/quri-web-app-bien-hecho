@@ -1,9 +1,9 @@
-import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { map } from 'rxjs';
 import { UserService } from '../../user-management/services/user.service';
 import { ProjectAssembler } from './project.assembler';
 import { ProjectResponse } from './project.response';
+import { BaseService } from '../../shared/services/base.service';
 
 // this must be removed when the backend is ready
 const GET_ALL_USER_BLUEPRINTS = (id: string) =>
@@ -12,9 +12,12 @@ const GET_ALL_USER_BLUEPRINTS = (id: string) =>
 @Injectable({
     providedIn: 'root',
 })
-export class ProjectService {
+export class ProjectService extends BaseService<ProjectResponse> {
     protected userService = inject(UserService);
-    constructor(private http: HttpClient) {}
+
+    constructor() {
+        super('projects');
+    }
 
     getUserBlueprints() {
         const userId = this.userService.getSessionUserId();

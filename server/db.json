@@ -450,5 +450,31 @@
             "created_at": "2025-05-29T20:40:47.478Z",
             "total_amount": 118
         }
+    ],
+
+
+    "userWithProfile": [
+        {
+            "id": "user-1",
+            "email": "alice@example.com",
+            "password": "password",
+            "rol": "customer",
+            "profile": {
+                "first_name": "Alice",
+                "last_name": "Smith",
+                "gender": "men",
+                "addresses": [
+                    {
+                        "id": "address-1",
+                        "profile_id": "profile-1",
+                        "address": "123 Main St",
+                        "city": "Anytown",
+                        "country": "USA",
+                        "state": "CA",
+                        "zip": "12345"
+                    }
+                ]
+            }
+        }
     ]
 }
