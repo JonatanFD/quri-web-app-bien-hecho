@@ -36,7 +36,7 @@
 
 .project-header h1 {
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 16px;
   color: #333;
 }
@@ -110,6 +110,7 @@
 .detail-row strong {
   min-width: 120px;
   color: #555;
+  font-weight: 500;
 }
 
 .color-indicator {
@@ -155,6 +156,7 @@
   border-radius: 8px;
   padding: 0 24px;
   height: 44px;
+  font-weight: 500;
 }
 
 .action-buttons button mat-icon {
