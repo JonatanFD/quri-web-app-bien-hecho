@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
 import { RouterLink } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -28,38 +27,33 @@ export class DesignLabComponent implements OnInit {
     projects: Project[] = [];
     loading = true;
     error: string | null = null;
+    protected projectService = inject(ProjectService);
 
-    constructor(
-        private projectService: ProjectService,
-        private http: HttpClient,
-        // private authService: AuthService
-    ) {}
+    constructor() {}
 
     ngOnInit(): void {
         this.loadProjects();
     }
 
     loadProjects(): void {
-        // const userId = this.authService.getCurrentUserId();
-        // this.projectService.getAllById(userId).subscribe({
-        //     next: (projects) => {
-        //         // Filter by userId in frontend for extra safety
-        //         this.projects = projects.filter(
-        //             (project) => project.userId === userId
-        //         );
-        //         this.loading = false;
-        //     },
-        //     error: (err) => {
-        //         console.error('Error fetching projects:', err);
-        //         this.error = 'Failed to load projects. Please try again later.';
-        //         this.loading = false;
-        //     },
-        // });
+        this.projectService.getUserBlueprints().subscribe(
+            (projects) => {
+                console.log('Projects loaded:', projects);
+                this.projects = projects;
+                this.loading = false;
+            },
+            (err) => {
+                console.error('Error fetching projects:', err);
+                this.error = 'Failed to load projects. Please try again later.';
+                this.loading = false;
+            }
+        );
     }
 
     onProjectDeleted(deletedProjectId: string): void {
         this.projects = this.projects.filter(
             (project) => project.id !== deletedProjectId
         );
+        // add service to delete project from backend
     }
 }

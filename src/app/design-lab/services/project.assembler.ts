@@ -23,4 +23,8 @@ export class ProjectAssembler {
             layers
         );
     }
+
+    static toEntitiesFromResponse(responses: ProjectResponse[]): Project[] {
+        return responses.map(response => this.toEntityFromResponse(response));
+    }
 }
